@@ -1,5 +1,6 @@
 package com.example.demolib.api
 
+import android.util.Log
 import com.facebook.stetho.Stetho
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
@@ -12,6 +13,7 @@ import com.facebook.stetho.okhttp3.StethoInterceptor
 private var apiService: APIService? = null
 
 fun getApis() : APIService {
+    Log.d("demolib", "api library integrated");
     if(apiService == null) {
         val gson = GsonBuilder()
             .setLenient()
